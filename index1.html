@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fintech Banking App</title>
+<link rel="icon" href="Fintech-Bank-copy.jpeg" type="image/x-con">
+<link rel="stylesheet" href="style1.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <p class="small">Good morning</p>
+      <h2>FINTECH User👋</h2>
+    </div>
+    <div class="icon">🔔</div>
+  </div>
+
+  <!-- Debit Card -->
+  <div class="bank-card">
+    <div class="card-top">
+      <span>FINTECHBANK</span>
+      <span>💳</span>
+    </div>
+
+    <div class="card-number">**** **** **** ****</div>
+
+    <div class="card-bottom">
+      <div>
+        <p class="label">Card Holder</p>
+        <p>***************</p>
+      </div>
+      <div>
+        <p class="label">Expires</p>
+        <p>**/**</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Balance -->
+  <div class="balance-section">
+    <div>
+      <p class="small">Available Balance</p>
+      <h1 id="balance">$00.00</h1>
+    </div>
+    <div class="eye" onclick="toggleBalance()">👁</div>
+  </div>
+
+  <!-- Chart -->
+  <div class="chart-card">
+    <canvas id="chart"></canvas>
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="actions">
+    <div class="action" onclick="openModal()">Send</div>
+    <div class="action">Request</div>
+    <div class="action">Top Up</div>
+    <div class="action">Bills</div>
+  </div>
+
+  <!-- Transactions -->
+  <div class="transactions">
+    <h3>Recent Transactions</h3>
+
+    <div class="transaction">
+      <div>
+        <p>Apple Store</p>
+        <small>Today</small>
+      </div>
+      <span class="debit">- $220</span>
+    </div>
+
+    <div class="transaction">
+      <div>
+        <p>Salary</p>
+        <small>Yesterday</small>
+      </div>
+      <span class="credit">+ $2,000</span>
+    </div>
+
+    <div class="transaction">
+      <div>
+        <p>Spotify</p>
+        <small>2 days ago</small>
+      </div>
+      <span class="debit">- $10</span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Bottom Nav -->
+<div class="bottom-nav">
+  <div>Home</div>
+  <div>Activity</div>
+  <div class="fab" onclick="openModal()">+</div>
+  <div>Cards</div>
+  <div>Profile</div>
+</div>
+
+<!-- Send Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3>Send Money</h3>
+    <input type="number" id="amount" placeholder="Enter amount">
+    <button onclick="sendMoney()">Send</button>
+  </div>
+</div>
+
+<script src="script1.jsindez"></script>
+</body>
+</html>

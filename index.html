@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FINTECHBank App</title>
+<link rel="icon" href="Fintech-Bank-copy.jpeg" type="image/x-con">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="app">
+  <!-- Header -->
+  <div id="home" class="top-bar">
+    <div class="profile">
+      <div class="avatar">FB</div>
+      <div>
+        <p class="welcome">Welcome to</p>
+        <h3>FINTECH BANKING </h3>
+      </div>
+    </div>
+    <div id="notification" class="notification">🔔</div>
+  </div>
+
+  <!-- Balance Card -->
+  <div class="card">
+    <p class="card-label">Total Available Balance</p>
+    <h1 id="balance">$1520,320.00</h1>
+    <canvas id="balanceChart"></canvas>
+  </div>
+  <div class="client">
+  <a href="index2.html" class="client-account">Mary Isaacs account</a>
+  </div>
+  <!-- Quick Actions -->
+  <div class="actions">
+    <div class="action" onclick="openModal()">➕<span>Add Cash</span></div>
+    <a href="index1.html" class="action">💳<span>Cards</span></a>
+    <a href="inndex3.html" class="action">📊<span>Stats</span></a>
+    <div class="action">⚙<span>Settings</span></div>
+  </div>
+
+  <div class="services"></div>
+  <h2>Our Banking Services</h2>
+  <div class="card-container">
+    <div class="service-card">
+      <i class="fas fa-paper-plane"></i>
+      <h3>Send Money</h3>
+      <p>Transfer funds instantly to any bank.</p>
+      <button onclick="serviceAlert('Mobile Transfer')">Use Service</button>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Mobile Recharge</h3>
+      <p>Recharge Bank Account Easily.</p>
+      <button onclick="serviceAlert('Mobile Recharge')">Use Service</button>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Pay Bills</h3>
+      <p>Pays online bills and Shop online.</p>
+      <button onclick="serviceAlert('Bill Payment')">Use Service</button>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-university"></i>
+      <h3>Loan Request</h3>
+      <p>Apply for instant personal loan.</p>
+      <button onclick="serviceAlert('Mobile Recharge')">Use Service</button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Transactions -->
+  <div id="activities" class="transactions">
+    <h3>Recent Activity</h3>
+
+    <div class="transaction">
+      <div>
+        <p>Apple Store</p>
+        <small>Today</small>
+      </div>
+      <span class="debit">- $520</span>
+    </div>
+
+    <div class="transaction">
+      <div>
+        <p>Loan</p>
+        <small>Yesterday</small>
+      </div>
+      <span class="credit">+ $5,000</span>
+    </div>
+
+    <div class="transaction">
+      <div>
+        <p>Netflix</p>
+        <small>1 days ago</small>
+      </div>
+      <span class="debit">- $50</span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+  <a href="#home">🏠<span class="deco">Home</span></a>
+  <a href="#activities">📈<span class="deco">Activities</span></a>
+  <div class="fab" onclick="openModal()">＋</div>
+  <a href="#contact">💬<span class="deco">Contact</span></a>
+  <a href="index2.html">👤<span class="deco">MY Profile</span></a>
+</div>
+
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3>Send Money</h3>
+    <input type="number" id="amount" placeholder="Enter Amount">
+    <button onclick="sendMoney()">Send</button>
+  </div>
+</div>
+
+<section id="contact" class="section contact-section">
+                <h2 class="section-title">Contact FINTECH</h2>
+                <p class="contact-message">
+                    I'd love to hear from you! Weather you Want to take a Loan or you need any of our Service or just want to say hello, Feel free to reach out.
+                </p>
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>Feel free to drop an email:</p>
+                        <a href="mailto:fintechrefundbank@gmail.com">fintechrefundbank@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>Feel free to drop an email:</p>
+                        <a href="tel:+16143726663">+16143726663</a>
+                    </div>
+                   
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61588505667592" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/message/RBV747R3DC2HK1" class="social-iconz"><i class="fab fa-whatsapp"></i></a>                 
+                </div>
+               </section>
+            
+
+<script src="script.js"></script>
+</body>
+</html>
